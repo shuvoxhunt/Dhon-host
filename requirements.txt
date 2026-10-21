@@ -1,0 +1,8 @@
+pyTelegramBotAPI
+aiogram
+aiohttp
+flask
+requests
+psutil
+Pillow
+aiosqlite
