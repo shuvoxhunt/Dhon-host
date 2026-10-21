@@ -48,9 +48,13 @@ YOUR_USERNAME = '@virus_pro_xz' # ADD YOUR USERNAME
 UPDATE_CHANNEL = 'https://t.me/shuvodipjrp' # ADD YOUR YOU CHANNEL USERNAME 
 
 # Folder setup
+# Deplexo's application directory may be read-only. Use a writable data path.
+# Set DATA_DIR to a persistent mounted volume path in the Deplexo dashboard
+# if you need uploaded scripts and the SQLite database to survive redeploys.
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-UPLOAD_BOTS_DIR = os.path.join(BASE_DIR, 'upload_bots')
-IROTECH_DIR = os.path.join(BASE_DIR, 'inf')
+DATA_DIR = os.path.abspath(os.environ.get('DATA_DIR', '/tmp/shuvox_data'))
+UPLOAD_BOTS_DIR = os.path.join(DATA_DIR, 'upload_bots')
+IROTECH_DIR = os.path.join(DATA_DIR, 'inf')
 DATABASE_PATH = os.path.join(IROTECH_DIR, 'bot_data.db')
 
 # File upload limits
