@@ -1,0 +1,9 @@
+version: 1
+type: worker
+
+build:
+  framework: auto
+  install: pip install -r requirements.txt
+
+run:
+  command: python bots.py
